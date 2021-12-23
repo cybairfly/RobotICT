@@ -1,0 +1,33 @@
+{
+  "name": "developer-interview-exercise",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "meteor-node-stubs": "^1.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "@apify/eslint-config": "^0.2.2",
+    "@babel/eslint-parser": "^7.16.5",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb": "19.0.2",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.27.1",
+    "eslint-plugin-react-hooks": "4.3.0"
+  }
+}
