@@ -32,7 +32,7 @@ const checkInput = input => {
 
 const schema = {
     number: null,
-    label: null,
+    result: null,
     marker: null,
     divisors: null,
 };
@@ -64,19 +64,19 @@ const Record = (number, rules) => {
     const recordModels = {
         completelyDivisible: (number, rules) => ({
             number,
-            label: mergeLabels(rules),
+            result: mergeLabels(rules),
             marker: markers.every,
             divisors: allDivisors,
         }),
         partiallyDivisible: (number, rules) => ({
             number,
-            label: mergeLabels(rules),
+            result: mergeLabels(rules),
             marker: markers.some,
             divisors: getDivisors(rules),
         }),
         default: number => ({
             number,
-            label: number,
+            result: number,
             marker: markers.none,
         }),
     };
