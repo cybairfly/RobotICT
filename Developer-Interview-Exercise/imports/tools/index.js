@@ -37,28 +37,11 @@ const schema = {
     divisors: null,
 };
 
-const input = {
-    rules: [
-        [3, 'Robot'],
-        [7, 'seven'],
-        [5, 'ICT'],
-        [2, 'two'],
-        [4, 'four'],
-    ],
-    range: {
-        start: 13,
-        end: 195,
-    },
-};
-
 const markers = {
     none: 'X',
     some: '○',
     every: '●',
 };
-
-const rules = sortRules(input.rules);
-const allDivisors = getDivisors(rules);
 
 const Record = (number, rules) => {
     const recordModels = {
@@ -66,7 +49,7 @@ const Record = (number, rules) => {
             number,
             result: mergeLabels(rules),
             marker: markers.every,
-            divisors: allDivisors,
+            divisors: getDivisors(rules),
         }),
         partiallyDivisible: (number, rules) => ({
             number,
@@ -81,17 +64,17 @@ const Record = (number, rules) => {
         }),
     };
 
-    if (isDivisibleByEvery(number)(allDivisors))
-        return recordModels.completelyDivisible(number, rules);
-
     const rulesFound = matchRules(number, rules);
-    if (rulesFound.length)
-        return recordModels.partiallyDivisible(number, rulesFound);
+    if (rulesFound.length) {
+        return rules.length === rulesFound.length ?
+            recordModels.completelyDivisible(number, rules) :
+            recordModels.partiallyDivisible(number, rulesFound);
+    }
 
     return recordModels.default(number);
 };
 
-const numberToRecord = number => ({
+const inputToRecord = rules => number => ({
     ...schema,
     ...Record(number, rules),
 });
@@ -99,17 +82,18 @@ const numberToRecord = number => ({
 const generateRecords = input => {
     checkInput(input);
     const range = arrayFromInput(input.range);
-    const records = range.map(numberToRecord);
+    const rules = sortRules(input.rules);
+    const records = range.map(inputToRecord(rules));
 
     return records;
 };
 
-const records = generateRecords(input);
+// const records = generateRecords(input);
 
-console.log(records.map(({
-    divisors, ...rest
-}) => ({
-    ...rest, divisors: (Array.isArray(divisors) && divisors.length > 1 && divisors) || (divisors && divisors[0]) || divisors,
-})));
+// console.log(records.map(({
+//     divisors, ...rest
+// }) => ({
+//     ...rest, divisors: (Array.isArray(divisors) && divisors.length > 1 && divisors) || (divisors && divisors[0]) || divisors,
+// })));
 
-module.exports = { records, generateRecords };
+module.exports = { generateRecords };
