@@ -1,15 +1,18 @@
 import { Meteor } from 'meteor/meteor';
-import { Records } from '../imports/api/records';
+import { Batches } from '../imports/db/batches';
+import { Records } from '../imports/db/records';
 import { generateRecords } from '../imports/tools';
 import config from '../imports/config';
 import '../imports/api/methods';
+import '../imports/api/publish';
 
 Meteor.startup(() => {
-    Records.remove({});
     // If the Links collection is empty, add some data.
     if (Records.find().count() === 0) {
+        const input = config.input.default;
         const batchId = new Date().getTime();
-        const records = generateRecords(config.defaultInput);
+        const records = generateRecords(input);
         records.forEach(record => Records.insert({...record, batchId}));
+        Batches.insert({id: batchId, input});
     }
 });

@@ -8,6 +8,10 @@ body {
   font-family: sans-serif;
 }
 
+form {
+  margin: 0 auto 50px auto;
+}
+
 input.range {
   margin: 0 auto;
 }
@@ -30,6 +34,15 @@ table td {
   border: 1px dotted black;
 }
 
+pre {
+  height: 2.5em;
+  overflow: hidden;
+}
+
+pre:hover {
+  height: auto;
+}
+
 .grid {
   display: grid;
   height: 100vh;
@@ -48,7 +61,8 @@ table td {
   min-height: max-content;
 }
 
-.left {
+.sidebar {
+  overflow: auto;
   grid-area: left;
 }
 
@@ -62,6 +76,7 @@ table td {
 }
 
 .right {
+  overflow: auto;
   grid-area: right;
 }
 
