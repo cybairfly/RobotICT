@@ -6,10 +6,13 @@ export type range = {
 };
 
 export type input = {
-    default: {
-        rules: rules,
-        range: range,
-    },
+    rules: rules,
+    range: range,
+}
+
+export type batch = {
+    id: number,
+    input: input,
 }
 
 export interface onRangeChange {

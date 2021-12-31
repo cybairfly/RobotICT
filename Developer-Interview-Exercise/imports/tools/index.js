@@ -38,9 +38,9 @@ const schema = {
 };
 
 const markers = {
-    none: 'X',
-    some: '○',
-    every: '●',
+    none: '❌',
+    some: '🔆',
+    every: '✔️',
 };
 
 const Record = (number, rules) => {

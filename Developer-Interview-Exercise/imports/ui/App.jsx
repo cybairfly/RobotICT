@@ -33,21 +33,26 @@ export const App = () => {
                     <div>
                         <Rules rules={rules} setBatchId={setBatchId} onRulesChange={handlers.onRulesChange} />
                         <Range range={range} setBatchId={setBatchId} onRangeChange={handlers.onRangeChange} />
-                        <Reset onReset={handlers.onReset} />
                     </div>
                 </aside>
                 <article className="article">
                     <div id="content">
                         {
                             (!batchId && !firstBatch) ?
-                                <div className="loading">Loading...</div> :
+                                (
+                                    <div className="text-center">
+                                        <div className="spinner-grow text-secondary" role="status">
+                                            <span className="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                ) :
                                 <Table batchId={batchId || firstBatch.id} />
                         }
                     </div>
                 </article>
                 <aside className="right">
                     <div>
-                        <History batchId={batchId} />
+                        <History batchId={batchId} onResetHistory={handlers.onResetHistory} />
                     </div>
                 </aside>
                 <footer className="footer">

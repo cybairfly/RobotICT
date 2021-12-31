@@ -19,5 +19,5 @@ export const handlers = {
             setBatchId(batchId);
         });
     },
-    onReset: event => Meteor.call(removeRecords),
+    onResetHistory: event => Meteor.call(removeRecords),
 };

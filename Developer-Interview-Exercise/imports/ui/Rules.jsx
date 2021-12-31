@@ -21,7 +21,7 @@ export class Rules extends React.Component {
             <div key={index}>
                 <input required type="number" min="1" max="1000" name="divisor" value={divisor} onChange={this.handleChangeDivisor.bind(this, index)}></input>
                 <input required type="text" name="label" value={label} onChange={this.handleChangeLabel.bind(this, index)}></input>
-                <input type='button' value='Remove' onClick={this.handleRemove.bind(this, index)} />
+                <input type='button' value='Remove' className='btn btn-sm btn-outline-danger' onClick={this.handleRemove.bind(this, index)} />
             </div>,
         );
     }
@@ -39,7 +39,7 @@ export class Rules extends React.Component {
     }
 
     handleAddRule() {
-        this.setState(prevState => ({ rules: [...prevState.rules, [1, 'test']] }));
+        this.setState(prevState => ({ rules: [...prevState.rules, [1, '']] }));
     }
 
     handleRemove(index) {
@@ -55,12 +55,15 @@ export class Rules extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Rules</h2>
+            <div className='section'>
                 <form onSubmit={this.handleSubmit}>
+                    <div className='section-header'>
+                        <h2>Rules</h2>
+                        <input type="submit" className='btn btn-success' value="Update" />
+                    </div>
+
                     {this.injectInputs()}
-                    <input type='button' value='Add rule' onClick={this.handleAddRule.bind(this)} />
-                    <input type="submit" value="Submit" />
+                    <input type='button' value='Add rule' className='btn btn-sm btn-outline-primary' onClick={this.handleAddRule.bind(this)} />
                 </form>
             </div>
         );

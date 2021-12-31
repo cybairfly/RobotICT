@@ -6,9 +6,9 @@ import React, { useState } from 'react';
  */
 export const Reset = ({ onReset }) => {
     return (
-        <div>
+        <div className='section section-header'>
             <h2>Reset</h2>
-            <button type="submit" onClick={onReset}>Remove all records</button>
+            <button type="submit" className='btn btn-danger' onClick={onReset}>Remove all records</button>
         </div>
     );
 };

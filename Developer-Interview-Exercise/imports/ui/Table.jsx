@@ -36,7 +36,7 @@ export const Table = ({batchId}) => {
     });
 
     return (
-        <table className='table-dark table-striped table-hover table-active'>
+        <table className='table table-sm table-striped table-hover table-active'>
             <thead>
                 <tr>
                     <th style={{ cursor: 'pointer' }} onClick={toggleSorting}>↕ Mark</th>
@@ -53,11 +53,18 @@ export const Table = ({batchId}) => {
                             <td>{record.marker}</td>
                             <td>{record.number}</td>
                             <td>{record.result}</td>
-                            <td>{record.divisors ? record.divisors.join(',') : record.divisor}</td>
+                            <td>{record.divisors ? record.divisors.join(', ') : record.divisor}</td>
                         </tr>
                     ))
                 }
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colSpan={4}>
+                        Load more
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     );
 };

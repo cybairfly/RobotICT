@@ -34,13 +34,16 @@ export const Range = ({onRangeChange, setBatchId}) => {
     };
 
     return (
-        <div>
-            <h2>Range</h2>
+        <div className='section'>
             <form onSubmit={event => onRangeChange(event)(range, setBatchId)}>
-                <input required type="number" min="1" max="1000" name="start" value={start} onChange={handleChange.start}></input>
-                <input required type="number" min="1" max="1000" name="end" value={end} onChange={handleChange.end}></input>
+                <div className='section-header'>
+                    <h2>Range</h2>
+                    <button type="submit" className='btn btn-success'>Update</button>
+                </div>
 
-                <button type="submit">Update</button>
+                <input required className='range' type="number" min="1" max="1000" name="start" value={start} onChange={handleChange.start} />
+                <input required className='range' type="number" min="1" max="1000" name="end" value={end} onChange={handleChange.end} />
+
             </form>
         </div>
     );
