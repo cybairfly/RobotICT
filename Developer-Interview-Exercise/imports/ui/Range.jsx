@@ -11,38 +11,65 @@ const {updateRecords, updateRange} = names.methods;
 export const Range = ({onRangeChange, setBatchId}) => {
     const [start, setStart] = useState(1);
     const [end, setEnd] = useState(100);
-    const range = {start, end};
+    const range = {
+        start: +start,
+        end: +end,
+    };
 
-    // TODO validation
     const handleChange = {
-        start: event => {
-            const { value } = event.target;
+        start: range =>
+            /** @param {Event & {target: HTMLInputElement}} event */
+            event => {
+                const { target, target: {value} } = event;
+                const {start, end} = range;
 
-            if (value < end)
-                setStart(value);
-            else
-                setStart(value);
-        },
-        end: event => {
-            const { value } = event.target;
+                if (value >= end) {
+                    target.classList.add('is-invalid');
+                    target.setCustomValidity('Range start must be less than end');
+                } else {
+                    target.setCustomValidity('');
+                    [
+                        target,
+                        document.querySelector('input[name="start"]'),
+                        document.querySelector('input[name="end"]'),
+                    ].forEach(node => node.classList.remove('is-invalid'));
+                }
 
-            if (value < start)
+                setStart(value);
+            },
+        end: range =>
+            /** @param {Event & {target: HTMLInputElement}} event */
+            event => {
+                const { target, target: {value} } = event;
+                const {start, end} = range;
+                
+                if (value <= start) {
+                    target.classList.add('is-invalid');
+                    target.setCustomValidity('Range start must be less than end');
+                } else {
+                    target.setCustomValidity('');
+                    [
+                        target,
+                        document.querySelector('input[name="start"]'),
+                        document.querySelector('input[name="end"]'),
+                    ].forEach(node => node.classList.remove('is-invalid'));
+                }
+
                 setEnd(value);
-            else
-                setEnd(value);
-        },
+            },
     };
 
     return (
         <div className='section'>
-            <form onSubmit={event => onRangeChange(event)(range, setBatchId)}>
+            <form className='needs-validation' onSubmit={event => onRangeChange(event)(range, setBatchId)}>
                 <div className='section-header'>
                     <h2>Range</h2>
                     <button type="submit" className='btn btn-success'>Update</button>
                 </div>
 
-                <input required className='range' type="number" min="1" max="1000" name="start" value={start} onChange={handleChange.start} />
-                <input required className='range' type="number" min="1" max="1000" name="end" value={end} onChange={handleChange.end} />
+                <input required className='range' type="number" min="1" max="100" name="start" value={start} onChange={handleChange.start(range)} />
+                <input required className='range' type="number" min="1" max="100" name="end" value={end} onChange={handleChange.end(range)} />
+                <div className="invalid-feedback">Please provide two unequal consecutive numbers.</div>
 
             </form>
         </div>

@@ -19,7 +19,7 @@ export class Rules extends React.Component {
     injectInputs() {
         return this.state.rules.map(([divisor, label], index) =>
             <div key={index}>
-                <input required type="number" min="1" max="1000" name="divisor" value={divisor} onChange={this.handleChangeDivisor.bind(this, index)}></input>
+                <input required type="number" min="1" max="100" name="divisor" value={divisor} onChange={this.handleChangeDivisor.bind(this, index)}></input>
                 <input required type="text" name="label" value={label} onChange={this.handleChangeLabel.bind(this, index)}></input>
                 <input type='button' value='Remove' className='btn btn-sm btn-outline-danger' onClick={this.handleRemove.bind(this, index)} />
             </div>,
@@ -39,7 +39,7 @@ export class Rules extends React.Component {
     }
 
     handleAddRule() {
-        this.setState(prevState => ({ rules: [...prevState.rules, [1, '']] }));
+        this.setState(prevState => ({ rules: [...prevState.rules, []] }));
     }
 
     handleRemove(index) {
