@@ -4,7 +4,7 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { Records } from '../db/records';
 import { Batches } from '../db/batches';
 
-export const History = ({ onResetHistory }) => {
+export const History = ({ onResetHistory, setBatchId }) => {
     /** @type {[import('../types').batch]} */
     const batches = useTracker(() => {
         // Meteor.subscribe('batches', {id: batchId});
@@ -20,7 +20,7 @@ export const History = ({ onResetHistory }) => {
             </div>
             {
                 batches.map(batch => (
-                    <div key={batch.id}>
+                    <div key={batch.id} className='batch'>
                         <pre>
                             <p>Batch number {batch.id}</p>
                             <p>Range</p>
@@ -37,7 +37,9 @@ export const History = ({ onResetHistory }) => {
                                     </p>
                                 ))
                             }
+                            <button type="submit" className='btn btn-success' onClick={event => setBatchId(batch.id)}>Preview</button>
                         </pre>
+
                     </div>
                 ))
             }

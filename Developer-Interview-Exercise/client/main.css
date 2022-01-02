@@ -80,9 +80,17 @@ pre:hover {
   padding: 20px;
 }
 
-.right {
+.history {
   overflow: auto;
   grid-area: right;
+}
+
+.batch {
+  background-color: transparent;
+}
+
+.batch:hover {
+  background-color: orange;
 }
 
 .footer {
@@ -91,6 +99,6 @@ pre:hover {
 
 .grid div:not(.content) {
   color: #242424;
-  border: 1px solid silver;
+  /* border: 1px solid silver; */
   /* background-color: #ff7b00; */
 }

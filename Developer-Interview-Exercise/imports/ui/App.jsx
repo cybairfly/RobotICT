@@ -48,9 +48,9 @@ export const App = () => {
                         }
                     </div>
                 </article>
-                <aside className="right">
+                <aside className="history">
                     <div>
-                        <History batchId={batchId} onResetHistory={handlers.onResetHistory} />
+                        <History batchId={batchId} setBatchId={setBatchId} onResetHistory={handlers.onResetHistory} />
                     </div>
                 </aside>
                 <footer className="footer">
