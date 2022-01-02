@@ -6,14 +6,12 @@ export class Rules extends React.Component {
      * Define rules for the batch of numbers
      * @param {Object} props
      * @param {import('../types').rules} props.rules
-     * @param {import('../types').onRulesChange} props.onRulesChange
      */
     constructor(props) {
         super(props);
-        this.state = { rules: props.rules };
-        this.setBatchId = props.setBatchId;
-        this.onRulesChange = props.onRulesChange;
-        this.handleSubmit = this.handleSubmit.bind(this);
+        const { rules, setRules } = props;
+        this.state = { rules };
+        this.setRules = setRules;
     }
 
     injectInputs() {
@@ -30,41 +28,34 @@ export class Rules extends React.Component {
         const rules = [...this.state.rules];
         rules[index][0] = +event.target.value;
         this.setState({ rules });
+        this.setRules(rules);
     }
 
     handleChangeLabel(index, event) {
         const rules = [...this.state.rules];
         rules[index][1] = event.target.value;
         this.setState({ rules });
+        this.setRules(rules);
     }
 
     handleAddRule() {
         this.setState(prevState => ({ rules: [...prevState.rules, []] }));
+        this.setRules(this.state.rules);
     }
 
     handleRemove(index) {
         const rules = [...this.state.rules];
         rules.splice(index, 1);
         this.setState({ rules });
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
-        this.onRulesChange(event)(this.state.rules, this.setBatchId);
+        this.setRules(rules);
     }
 
     render() {
         return (
             <div className='section'>
-                <form onSubmit={this.handleSubmit}>
-                    <div className='section-header'>
-                        <h2>Rules</h2>
-                        <input type="submit" className='btn btn-success' value="Update" />
-                    </div>
-
-                    {this.injectInputs()}
-                    <input type='button' value='Add rule' className='btn btn-sm btn-outline-primary' onClick={this.handleAddRule.bind(this)} />
-                </form>
+                <h2>Rules</h2>
+                {this.injectInputs()}
+                <input type='button' value='Add rule' className='btn btn-sm btn-outline-primary' onClick={this.handleAddRule.bind(this)} />
             </div>
         );
     }

@@ -6,11 +6,25 @@ import { insertRecords } from './helpers';
 import config, { names } from '../config';
 import schema from '../schema';
 
-const { removeRecords, updateRange, updateRules, fetchBatches } = names.methods;
+const { removeRecords, updateInput, updateRange, updateRules, fetchBatches } = names.methods;
 
 Meteor.methods({
     [fetchBatches]({ filter = {}, options }) {
         return Batches.find(filter, options).fetch();
+    },
+
+    [updateInput](input) {
+        const {range, rules} = input;
+        new SimpleSchema(schema.range).validate({ range });
+        check(rules, Match.Where(rules =>
+            rules.every(([divisor, label]) =>
+                typeof divisor === 'number'
+                && typeof label === 'string',
+            )));
+
+        const { batchId } = insertRecords(input);
+
+        return { batchId };
     },
 
     [updateRange](range) {

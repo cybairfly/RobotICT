@@ -3,6 +3,7 @@ module.exports = {
         methods: {
             removeRecords: 'records.remove',
             updateRecords: 'records.update',
+            updateInput: 'input.update',
             updateRange: 'range.update',
             updateRules: 'rules.update',
             fetchBatches: 'batches.fetch',

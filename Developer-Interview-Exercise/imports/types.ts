@@ -15,10 +15,10 @@ export type batch = {
     input: input,
 }
 
-export interface onRangeChange {
+export interface onRangeSubmit {
     (event: Event): (range: range, setBatchId: Function) => void;
 }
 
-export interface onRulesChange {
+export interface onRulesSubmit {
     (event: Event): (rules: rules, setBatchId: Function) => void;
 }
