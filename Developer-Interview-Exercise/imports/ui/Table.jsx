@@ -10,7 +10,7 @@ export const Table = ({batchId}) => {
         none: true,
     });
 
-    const toggleSorting = () => {
+    const toggleSorting = (sort, setSort) => event => {
         if (sort.none)
             setSort({...sort, asc: true, none: false});
 
@@ -19,27 +19,25 @@ export const Table = ({batchId}) => {
 
         if (sort.desc)
             setSort({...sort, desc: false, none: true});
+    };
 
+    const records = useTracker(() => {
+        Meteor.subscribe('records', {batchId});
+        const filter = batchId ? {batchId} : {};
         const options = {
             sort: (sort.none && {})
             || (sort.asc && { marker: 1 })
             || (sort.desc && { marker: -1 }),
         };
 
-        Meteor.subscribe('records', options);
-    };
-
-    const records = useTracker(() => {
-        Meteor.subscribe('records', {batchId});
-        const filter = batchId ? {batchId} : {};
-        return Records.find(filter).fetch();
+        return Records.find(filter, options).fetch();
     });
 
     return (
         <table className='table table-sm table-striped table-hover table-active'>
             <thead>
                 <tr>
-                    <th style={{ cursor: 'pointer' }} onClick={toggleSorting}>↕ Mark</th>
+                    <th style={{ cursor: 'pointer' }} onClick={toggleSorting(sort, setSort)}>↕ Mark</th>
                     <th>Input</th>
                     <th>Result</th>
                     <th>Divisor(s)</th>
