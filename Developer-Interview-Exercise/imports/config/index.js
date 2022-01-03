@@ -20,7 +20,7 @@ module.exports = {
             ],
             range: {
                 start: 1,
-                end: 10,
+                end: 100,
             },
         },
     },
