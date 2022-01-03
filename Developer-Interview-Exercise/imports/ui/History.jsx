@@ -15,14 +15,17 @@ export const History = ({ onResetHistory, setBatchId }) => {
     return (
         <div className='section'>
             <div className='section-header'>
-                <h2>History</h2>
+                <h3>History</h3>
                 <button type="submit" className='btn btn-danger' onClick={onResetHistory}>Remove</button>
             </div>
             {
                 batches.map(batch => (
                     <div key={batch.id} className='batch'>
                         <pre>
-                            <p>Batch number {batch.id}</p>
+                            <div className='section-header'>
+                                <p>Batch number {batch.id}</p>
+                                <button type="submit" className='btn btn-success' onClick={event => setBatchId(batch.id)}>Preview</button>
+                            </div>
                             <p>Range</p>
                             <p>
                                 <input type={'number'} value={batch.input.range.start} disabled readOnly />
@@ -37,7 +40,6 @@ export const History = ({ onResetHistory, setBatchId }) => {
                                     </p>
                                 ))
                             }
-                            <button type="submit" className='btn btn-success' onClick={event => setBatchId(batch.id)}>Preview</button>
                         </pre>
 
                     </div>

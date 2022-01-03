@@ -1,35 +1,58 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: sans-serif;
+  background: linear-gradient(to bottom, orange, darkorange 19%, transparent 20%, transparent 74%, transparent 75%);
 }
 
 form {
   margin: 0 auto 50px auto;
 }
 
-input.range {
-  margin: 0 auto;
+input {
+  text-align: center;
+}
+
+input.rules-divisor {
+  min-width: 0;
+  max-width: 20%;
+  flex-shrink: 2;
+}
+
+input.rules-label {
+  min-width: 0;
+  max-width: 30%;
+  text-align: center;
+}
+
+button.remove {
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 table {
-  /* border-collapse: collapse; */
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-pre {
-  height: 1.5em;
-  overflow: hidden;
-  margin-bottom: 0 !important;
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
-pre:hover {
-  height: auto;
+.center {
+  text-align: center;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
 }
 
 .section {
@@ -41,39 +64,57 @@ pre:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   align-content: center;
   margin: 0 0 5% 0;
 }
 
 .grid {
   display: grid;
-  padding: 2.5%;
   height: 100vh;
   width: 100vw;
-  gap: 0 10%;
+  gap: 10% 10%;
+  padding: 2%;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 8fr;
   grid-auto-flow: row;
   grid-template-areas:
     "header header header"
     "left content right"
-    "footer footer footer";
 }
 
 .header {
   grid-area: header;
-  min-height: max-content;
+  border-radius: 5vh;
+  background-color: black;
+}
+
+img.header {
+  width: 5%;
+  height: 5%;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.title {
+  display: flex;
+  color:white
+}
+
+.title-color {
+  color: darkorange
 }
 
 .sidebar {
   overflow: auto;
   grid-area: left;
+  font-size: smaller;
 }
 
 .article {
   overflow: auto;
   grid-area: content;
+  font-size: smaller;
 }
 
 #content {
@@ -83,14 +124,17 @@ pre:hover {
 .history {
   overflow: auto;
   grid-area: right;
+  font-size: smaller;
 }
 
 .batch {
-  background-color: transparent;
+  height: 3.5em;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .batch:hover {
-  background-color: orange;
+  height: auto;
 }
 
 .footer {

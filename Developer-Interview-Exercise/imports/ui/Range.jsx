@@ -53,10 +53,18 @@ export const Range = ({ range, setRange }) => {
 
     return (
         <div className='section'>
-            <h2>Range</h2>
-            <input required className='range' type="number" min="1" max={+range.end - 1} name="start" value={range.start} onChange={handleChange.start(range)} />
-            <input required className='range' type="number" min={+range.start + 1} max="100" name="end" value={range.end} onChange={handleChange.end(range)} />
-            <div className="invalid-feedback">Please provide two unequal consecutive numbers.</div>
+            <h3>Range</h3>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Start</span>
+                </div>
+                <input required type="number" min="1" max={+range.end - 1} name="start" value={range.start} onChange={handleChange.start(range)} />
+                <input required type="number" min={+range.start + 1} max="100" name="end" value={range.end} onChange={handleChange.end(range)} />
+                <div className="input-group-append">
+                    <span className="input-group-text">End</span>
+                </div>
+                <div className="invalid-feedback">Please provide two unequal consecutive numbers.</div>
+            </div>
         </div>
     );
 };

@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 export const Reset = ({ onReset }) => {
     return (
         <div className='section section-header'>
-            <h2>Reset</h2>
+            <h3>Reset</h3>
             <button type="submit" className='btn btn-danger' onClick={onReset}>Remove all records</button>
         </div>
     );

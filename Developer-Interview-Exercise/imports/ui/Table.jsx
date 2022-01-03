@@ -61,7 +61,7 @@ export const Table = ({batchId}) => {
             <tfoot>
                 <tr>
                     <td colSpan={4}>
-                        Load more
+                        {`${records.length} items loaded.`}
                     </td>
                 </tr>
             </tfoot>

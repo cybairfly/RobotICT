@@ -53,11 +53,6 @@ export const App = () => {
                         <History batchId={batchId} setBatchId={setBatchId} onResetHistory={handlers.onResetHistory} />
                     </div>
                 </aside>
-                <footer className="footer">
-                    <div>
-                        <p>Footer</p>
-                    </div>
-                </footer>
             </div>
         </div>
     );

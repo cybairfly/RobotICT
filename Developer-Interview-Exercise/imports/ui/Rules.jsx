@@ -16,10 +16,16 @@ export class Rules extends React.Component {
 
     injectInputs() {
         return this.state.rules.map(([divisor, label], index) =>
-            <div key={index}>
-                <input required type="number" min="1" max="100" name="divisor" value={divisor} onChange={this.handleChangeDivisor.bind(this, index)}></input>
-                <input required type="text" name="label" value={label} onChange={this.handleChangeLabel.bind(this, index)}></input>
-                <input type='button' value='Remove' className='btn btn-sm btn-outline-danger' onClick={this.handleRemove.bind(this, index)} />
+            <div key={index} className='input-group nowrap'>
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Divisor:</span>
+                </div>
+                <input required type="number" className='rules-divisor' min="1" max="100" name="divisor" value={divisor} onChange={this.handleChangeDivisor.bind(this, index)}></input>
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Label:</span>
+                </div>
+                <input required type="text" className='rules-label' size={20} name="label" value={label} onChange={this.handleChangeLabel.bind(this, index)}></input>
+                <input type='button' value='X' className='remove btn btn-sm btn-outline-danger' onClick={this.handleRemove.bind(this, index)} />
             </div>,
         );
     }
@@ -53,7 +59,7 @@ export class Rules extends React.Component {
     render() {
         return (
             <div className='section'>
-                <h2>Rules</h2>
+                <h3>Rules</h3>
                 {this.injectInputs()}
                 <input type='button' value='Add rule' className='btn btn-sm btn-outline-primary' onClick={this.handleAddRule.bind(this)} />
             </div>
