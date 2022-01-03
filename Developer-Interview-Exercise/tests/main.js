@@ -1,20 +1,18 @@
-import assert from "assert";
+import assert from 'assert';
+import {input} from '../imports/config';
+import pattern from './records.pattern.json';
+import {generateRecords} from '../imports/tools';
 
-describe("Developer-Interview-Exercise", function () {
-  it("package.json has correct name", async function () {
-    const { name } = await import("../package.json");
-    assert.strictEqual(name, "Developer-Interview-Exercise");
-  });
-
-  if (Meteor.isClient) {
-    it("client is not server", function () {
-      assert.strictEqual(Meteor.isServer, false);
+describe('algorithm', () => {
+    it('generates expected records', async () => {
+        const records = generateRecords(input.default);
+        // omit unique values from pattern for comparison
+        assert.deepStrictEqual(records, [...pattern.map(({
+            _id,
+            batchId,
+            ...rest
+        }) => ({
+            ...rest,
+        }))]);
     });
-  }
-
-  if (Meteor.isServer) {
-    it("server is not client", function () {
-      assert.strictEqual(Meteor.isClient, false);
-    });
-  }
 });

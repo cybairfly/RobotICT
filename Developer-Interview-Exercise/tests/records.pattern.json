@@ -1,0 +1,902 @@
+[
+    {
+        "_id": "DB9sDnzhgCDhbkrux",
+        "number": 1,
+        "result": 1,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "mo9Ajomki3DiuGdhL",
+        "number": 2,
+        "result": 2,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "okYBXus9TeZsu4xR5",
+        "number": 3,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "wxhhjEmTmDdtfas7D",
+        "number": 4,
+        "result": 4,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "iAy6QtsRhZFLz6Pyu",
+        "number": 5,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "dHs3MJZYqTTMh6CyH",
+        "number": 6,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "BfKNEY7nmBY4K2zR6",
+        "number": 7,
+        "result": 7,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "2mc3dhndZpBAbDPoE",
+        "number": 8,
+        "result": 8,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "A9Se4LrrsMn6XK3ru",
+        "number": 9,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "HwZZetn2BuDNJnbZs",
+        "number": 10,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "dhh5WiHLACYn6upyL",
+        "number": 11,
+        "result": 11,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "2YyDfxefNWmbQNYvn",
+        "number": 12,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "vNPWPrNhu6F3Ptqus",
+        "number": 13,
+        "result": 13,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "kqL28nZgjRGFi5wda",
+        "number": 14,
+        "result": 14,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "AJBD9mwLwu3Tsrxv8",
+        "number": 15,
+        "result": "RobotICT",
+        "marker": "✔️",
+        "divisors": [
+            3,
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "rP7HwczNLsD9eCyJq",
+        "number": 16,
+        "result": 16,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "garEpi2xDJXrsv5ZZ",
+        "number": 17,
+        "result": 17,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "xczJbvcPx4LaExJBY",
+        "number": 18,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "8gQLWyyo5Ed2YcKby",
+        "number": 19,
+        "result": 19,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "z3zqoMi7yvXCjCbWN",
+        "number": 20,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "eRHs3q3x2FDSSebXn",
+        "number": 21,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "LgF4ZEExfgRQerBCE",
+        "number": 22,
+        "result": 22,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "BgjYcsfnF2nnFas5T",
+        "number": 23,
+        "result": 23,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "pdiFhrj4Qkeec6p4W",
+        "number": 24,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "endKhcx34cAzYSzr9",
+        "number": 25,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "G6LsvxGYP6r63wTKC",
+        "number": 26,
+        "result": 26,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "rajvbPDMAnPjSQ9ph",
+        "number": 27,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "Y3BzJeXd9Zmx8oC4j",
+        "number": 28,
+        "result": 28,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "zMd9ytvYah4fecxbx",
+        "number": 29,
+        "result": 29,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "fJf5CqJ2df9RzjMPA",
+        "number": 30,
+        "result": "RobotICT",
+        "marker": "✔️",
+        "divisors": [
+            3,
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "wtnD75JFMzMYxmLkP",
+        "number": 31,
+        "result": 31,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "ekGHfuHZSJM7Ees3h",
+        "number": 32,
+        "result": 32,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "pX6TR6XzZtPxTGwSf",
+        "number": 33,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "HPTfctgdHHWf52X2u",
+        "number": 34,
+        "result": 34,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "CQn2dPiF5kk2xYEnT",
+        "number": 35,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "b6wAx8xktWeQgSQeQ",
+        "number": 36,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "AaP44aK5Ge4XQzfvW",
+        "number": 37,
+        "result": 37,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "ugdF8nmLtwgEH9ZZM",
+        "number": 38,
+        "result": 38,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "sDPoaFAmurf9vyfPx",
+        "number": 39,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "mhRxf9y6KcKzutPXR",
+        "number": 40,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "QfyJeJgYFxmPmD6Gn",
+        "number": 41,
+        "result": 41,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "54T8YQ8HxuPbhoLPS",
+        "number": 42,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "oitS3jc7FKRw2x95C",
+        "number": 43,
+        "result": 43,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "5KXbbAJgGqH8Cu9oP",
+        "number": 44,
+        "result": 44,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "Z9aYoSyurEHFpJKPo",
+        "number": 45,
+        "result": "RobotICT",
+        "marker": "✔️",
+        "divisors": [
+            3,
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "kJSPL3tbfzvPENBee",
+        "number": 46,
+        "result": 46,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "MAKSPqtzT75QJBRvG",
+        "number": 47,
+        "result": 47,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "BhjycdiEBbfnMbeJb",
+        "number": 48,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "zr2QCCtQFDKpPFJ9m",
+        "number": 49,
+        "result": 49,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "SGJSze7z8zFeRXNAY",
+        "number": 50,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "BNnPknzc526EyRQSK",
+        "number": 51,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "7LCnTxhrRok8D9bnm",
+        "number": 52,
+        "result": 52,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "eGTE9jPwaQxFHfe6P",
+        "number": 53,
+        "result": 53,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "JMAjt5E28hAL5fR5u",
+        "number": 54,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "5vFhaMHuDawyGBg7a",
+        "number": 55,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "tXunsqJC7mHEtbDZR",
+        "number": 56,
+        "result": 56,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "ccSawG9Peu7JuNgPY",
+        "number": 57,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "yrkEMgB43Q8JwYpAw",
+        "number": 58,
+        "result": 58,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "Pnx2knL5yhG8hzboJ",
+        "number": 59,
+        "result": 59,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "c8REAFmeRiw5jf6P7",
+        "number": 60,
+        "result": "RobotICT",
+        "marker": "✔️",
+        "divisors": [
+            3,
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "JmRGSE58oFRtDQC98",
+        "number": 61,
+        "result": 61,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "gZpfjvjd5vSm9m7Dj",
+        "number": 62,
+        "result": 62,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "PmyqZWioB6PLAh7zh",
+        "number": 63,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "jpa3BJ7B2yzHMZanM",
+        "number": 64,
+        "result": 64,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "TDXzWWYnXvpmD2zH8",
+        "number": 65,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "3Nz2MukjRiZjmcYiB",
+        "number": 66,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "uvgGDhd3Sat8AgHzH",
+        "number": 67,
+        "result": 67,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "d9bes5GAkv6YbF3d2",
+        "number": 68,
+        "result": 68,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "gWdE4EH8aRtMCRz2v",
+        "number": 69,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "gRKhPuzwJYzzhWw7K",
+        "number": 70,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "Y4F5gpzbbyyoeLmyX",
+        "number": 71,
+        "result": 71,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "w4kWggk5vRH8gpxY3",
+        "number": 72,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "yoywiqnTTEvZRqQvo",
+        "number": 73,
+        "result": 73,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "aknDkNJDoQ6fgDj9P",
+        "number": 74,
+        "result": 74,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "MLqSYf5xxDeDG7SXs",
+        "number": 75,
+        "result": "RobotICT",
+        "marker": "✔️",
+        "divisors": [
+            3,
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "A7Y2ZSuhJz87W9t47",
+        "number": 76,
+        "result": 76,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "n2LPfBSueBGiqNsS7",
+        "number": 77,
+        "result": 77,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "NFfSmL4gMr6LTo2uQ",
+        "number": 78,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "7fhHS4BYinj3XvZJw",
+        "number": 79,
+        "result": 79,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "7a6Rbc8bugmru3RHs",
+        "number": 80,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "5iRBmyrDE8LhXaCKA",
+        "number": 81,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "LGEQhmTFDwqRa2mnX",
+        "number": 82,
+        "result": 82,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "Z6NZjXscDMD88cyMS",
+        "number": 83,
+        "result": 83,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "f5dhbzTXCYEgZkZmS",
+        "number": 84,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "nZMEoY4fi4Gw8SiJv",
+        "number": 85,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "3B6vMYvLxxSBmbZWr",
+        "number": 86,
+        "result": 86,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "4ZpZG3jDw8abuHCXp",
+        "number": 87,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "8z9fDQaMrBndQ56Fs",
+        "number": 88,
+        "result": 88,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "9aE6iM9J4994exdWZ",
+        "number": 89,
+        "result": 89,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "DhffPxoBkHFrYdhcD",
+        "number": 90,
+        "result": "RobotICT",
+        "marker": "✔️",
+        "divisors": [
+            3,
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "R7dgCh48fBfL8XsNL",
+        "number": 91,
+        "result": 91,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "kAsofsh7vj6ufAD7B",
+        "number": 92,
+        "result": 92,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "idb3KR3LMXjrnzF5o",
+        "number": 93,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "tHxSsfqdZyiqw3H6g",
+        "number": 94,
+        "result": 94,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "ic5ianQs8757fn526",
+        "number": 95,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "vR6RnNPHCZDggE7LE",
+        "number": 96,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "EKf6kdCMe2fNmXPbA",
+        "number": 97,
+        "result": 97,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "fav2K8xzs8YpK3mFu",
+        "number": 98,
+        "result": 98,
+        "marker": "❌",
+        "divisors": null,
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "23zbw2YCJKFBv6B5B",
+        "number": 99,
+        "result": "Robot",
+        "marker": "🔆",
+        "divisors": [
+            3
+        ],
+        "batchId": 1641214520876
+    },
+    {
+        "_id": "BZMuPuPHwXsEBmq9K",
+        "number": 100,
+        "result": "ICT",
+        "marker": "🔆",
+        "divisors": [
+            5
+        ],
+        "batchId": 1641214520876
+    }
+]
