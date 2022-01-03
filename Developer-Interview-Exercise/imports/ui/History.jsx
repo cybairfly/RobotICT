@@ -7,8 +7,7 @@ import { Batches } from '../db/batches';
 export const History = ({ onResetHistory, setBatchId }) => {
     /** @type {[import('../types').batch]} */
     const batches = useTracker(() => {
-        // Meteor.subscribe('batches', {id: batchId});
-        // const filter = batchId ? {id: batchId} : {};
+        Meteor.subscribe('batches');
         return Batches.find({}, { sort: { id: -1 } }).fetch();
     });
 
