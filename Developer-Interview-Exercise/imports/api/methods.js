@@ -4,7 +4,7 @@ import { Batches } from '../db/batches';
 import { Records } from '../db/records';
 import { insertRecords } from './helpers';
 import config, { names } from '../config';
-import schema from '../schema';
+import models from '../models/input';
 
 const { removeRecords, updateInput, updateRange, updateRules, fetchBatches } = names.methods;
 
@@ -15,7 +15,7 @@ Meteor.methods({
 
     [updateInput](input) {
         const {range, rules} = input;
-        new SimpleSchema(schema.range).validate({ range });
+        new SimpleSchema(models.range).validate({ range });
         check(rules, Match.Where(rules =>
             rules.every(([divisor, label]) =>
                 typeof divisor === 'number'
@@ -28,7 +28,7 @@ Meteor.methods({
     },
 
     [updateRange](range) {
-        new SimpleSchema(schema.range).validate({ range });
+        new SimpleSchema(models.range).validate({ range });
 
         const input = {
             ...config.input.default,
