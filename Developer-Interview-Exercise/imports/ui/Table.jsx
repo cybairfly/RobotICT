@@ -47,7 +47,6 @@ export const Table = ({batchId}) => {
                 {
                     records.map(record => (
                         <tr key={`${batchId}-${record.number}`} record={record}>
-                            {/* <tr key={`row-${record.number}`}> */}
                             <td>{record.marker}</td>
                             <td>{record.number}</td>
                             <td>{record.result}</td>

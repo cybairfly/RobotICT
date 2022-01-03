@@ -1,9 +1,11 @@
 import { Meteor } from 'meteor/meteor';
 import React, { useState } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
-import { Records } from '../db/records';
 import { Batches } from '../db/batches';
 
+/**
+ * Enable listing and preview of previously submitted batches
+ */
 export const History = ({ onResetHistory, setBatchId }) => {
     /** @type {[import('../types').batch]} */
     const batches = useTracker(() => {

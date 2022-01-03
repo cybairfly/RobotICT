@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useTracker } from 'meteor/react-meteor-data';
-import config from '../config';
 
 /**
  * Change the range of numbers used by the generator
  * @param {Object} props
- * @param {import('../types').onRangeSubmit} props.onRangeSubmit
+ * @param {import('../types').range} props.range
  */
 export const Range = ({ range, setRange }) => {
     const handleChange = {

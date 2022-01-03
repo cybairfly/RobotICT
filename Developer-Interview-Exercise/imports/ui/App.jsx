@@ -2,14 +2,10 @@ import { useTracker } from 'meteor/react-meteor-data';
 import React, { useState } from 'react';
 import { Batches } from '../db/batches';
 import { Header } from './Header.jsx';
-import { Inputs } from './Inputs';
-import { Range } from './Range.jsx';
-import { Rules } from './Rules.jsx';
-import { Reset } from './Reset.jsx';
+import { Inputs } from './Inputs.jsx';
 import { Table } from './Table.jsx';
 import { History } from './History.jsx';
 import { handlers } from '../handlers';
-import config from '../config';
 
 export const App = () => {
     const [batchId, setBatchId] = useState(null);

@@ -5,8 +5,7 @@ import { handlers } from '../handlers';
 import config from '../config';
 
 /**
-//  * Remove all records from the database
- * @param {import('../handlers')} handlers
+ * Inputs for range and rules with central state management
  */
 export const Inputs = ({ setBatchId }) => {
     const [range, setRange] = useState({ ...config.input.default.range });

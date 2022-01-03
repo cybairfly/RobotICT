@@ -1,3 +1,20 @@
+import markers from './markers';
+import schema from './record.schema';
+
+/**
+ * Produce output based on a schema for a set of numbers using rules defined on input
+ * @param {import('../types').input} input
+ * @returns {import('../types').record}
+ */
+export function generateRecords(input) {
+    checkInput(input);
+    const range = arrayFromInput(input.range);
+    const rules = sortRules(input.rules);
+    const records = range.map(inputToRecord(rules));
+
+    return records;
+}
+
 const isDivisible = dividend => divisor => dividend % divisor === 0;
 const isNumberDivisibleBy = (dividend, divisor) => isDivisible(dividend)(divisor);
 const isDivisibleByEvery = dividend => divisors => divisors.every(isDivisible(dividend));
@@ -28,19 +45,6 @@ const checkInput = input => {
 
     if (input.range.start > input.range.end)
         throw new Error('Input range start must be lower than range end');
-};
-
-const schema = {
-    number: null,
-    result: null,
-    marker: null,
-    divisors: null,
-};
-
-const markers = {
-    none: '❌',
-    some: '🔆',
-    every: '✔️',
 };
 
 const Record = (number, rules) => {
@@ -78,22 +82,3 @@ const inputToRecord = rules => number => ({
     ...schema,
     ...Record(number, rules),
 });
-
-const generateRecords = input => {
-    checkInput(input);
-    const range = arrayFromInput(input.range);
-    const rules = sortRules(input.rules);
-    const records = range.map(inputToRecord(rules));
-
-    return records;
-};
-
-// const records = generateRecords(input);
-
-// console.log(records.map(({
-//     divisors, ...rest
-// }) => ({
-//     ...rest, divisors: (Array.isArray(divisors) && divisors.length > 1 && divisors) || (divisors && divisors[0]) || divisors,
-// })));
-
-module.exports = { generateRecords };

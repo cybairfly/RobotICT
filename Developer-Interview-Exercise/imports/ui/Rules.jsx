@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useTracker } from 'meteor/react-meteor-data';
 
 export class Rules extends React.Component {
     /**

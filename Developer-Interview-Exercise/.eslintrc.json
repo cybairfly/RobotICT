@@ -1,7 +1,6 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
         "meteor": true,
         "mongo": true,
         "node": true,
@@ -10,14 +9,11 @@
     },
     "extends": [
         "@apify",
-        // "airbnb",
-        // "airbnb/hooks",
         "plugin:react/recommended",
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:jsx-a11y/recommended"
     ],
-    // "parser": "@babel/eslint-parser",
     "parserOptions": {
         "requireConfigFile": false,
         "ecmaVersion": 2021,

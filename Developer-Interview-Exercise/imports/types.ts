@@ -15,6 +15,13 @@ export type batch = {
     input: input,
 }
 
+export type record = {
+    number: number,
+    result: string,
+    marker: string,
+    divisors: Array<number>,
+}
+
 export interface onRangeSubmit {
     (event: Event): (range: range, setBatchId: Function) => void;
 }

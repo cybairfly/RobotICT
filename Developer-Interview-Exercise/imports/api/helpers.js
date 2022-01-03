@@ -1,5 +1,3 @@
-import { check } from 'meteor/check';
-import config, { names } from '../config';
 import { generateRecords } from '../tools';
 import { Records } from '../db/records';
 import { Batches } from '../db/batches';
@@ -11,8 +9,4 @@ export const insertRecords = input => {
     Batches.insert({id: batchId, input});
 
     return {batchId};
-};
-
-export const removeRecords = () => {
-    Records.remove({});
 };
