@@ -5,7 +5,10 @@
 
 body {
   font-family: sans-serif;
-  background: linear-gradient(to bottom, orange, darkorange 19%, transparent 20%, transparent 74%, transparent 75%);
+  background: linear-gradient(to bottom, orange, darkorange 19%, transparent 20%, transparent 74%, transparent 75%), url("/media/bg.jpg");
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 form {
