@@ -1,10 +1,8 @@
-import { check, Match } from 'meteor/check';
-import SimpleSchema from 'simpl-schema';
 import { Batches } from '../db/batches';
 import { Records } from '../db/records';
 import { insertRecords } from './helpers';
-import config, { names } from '../config';
-import models from '../models/input';
+import { validateInput } from '../tools/input';
+import config, { input, names } from '../config';
 
 const { removeRecords, updateInput, updateRange, updateRules, fetchBatches } = names.methods;
 
@@ -14,21 +12,12 @@ Meteor.methods({
     },
 
     [updateInput](input) {
-        const {range, rules} = input;
-        new SimpleSchema(models.range).validate({ range });
-        check(rules, Match.Where(rules =>
-            rules.every(([divisor, label]) =>
-                typeof divisor === 'number'
-                && typeof label === 'string',
-            )));
-
-        const { batchId } = insertRecords(input);
-
-        return { batchId };
+        validateInput(input);
+        return insertRecords(input);
     },
 
     [updateRange](range) {
-        new SimpleSchema(models.range).validate({ range });
+        validateInput({range});
 
         const input = {
             ...config.input.default,
@@ -38,22 +27,18 @@ Meteor.methods({
             },
         };
 
-        const { batchId } = insertRecords(input);
-
-        return { batchId };
+        return insertRecords(input);
     },
 
     [updateRules](rules) {
-        check(rules, Match.Where(rules =>
-            rules.every(([divisor, label]) =>
-                typeof divisor === 'number'
-                && typeof label === 'string',
-            )));
+        validateInput({rules});
 
-        const input = { ...config.input.default, rules };
-        const { batchId } = insertRecords(input);
+        const input = {
+            ...config.input.default,
+            rules,
+        };
 
-        return { batchId };
+        return insertRecords(input);
     },
 
     [removeRecords]() {
