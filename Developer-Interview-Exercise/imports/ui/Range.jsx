@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 /**
  * Change the range of numbers used by the generator
  * @param {Object} props
- * @param {import('../types').range} props.range
+ * @param {types.range} props.range
  */
 export const Range = ({ range, setRange }) => {
     const handleChange = {

@@ -7,7 +7,7 @@ import { Batches } from '../db/batches';
  * Enable listing and preview of previously submitted batches
  */
 export const History = ({ onResetHistory, setBatchId }) => {
-    /** @type {[import('../types').batch]} */
+    /** @type {[types.batch]} */
     const batches = useTracker(() => {
         Meteor.subscribe('batches');
         return Batches.find({}, { sort: { id: -1 } }).fetch();

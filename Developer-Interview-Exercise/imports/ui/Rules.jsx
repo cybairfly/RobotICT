@@ -4,7 +4,7 @@ export class Rules extends React.Component {
     /**
      * Define rules for the batch of numbers
      * @param {Object} props
-     * @param {import('../types').rules} props.rules
+     * @param {types.rules} props.rules
      */
     constructor(props) {
         super(props);

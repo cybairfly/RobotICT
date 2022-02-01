@@ -3,8 +3,8 @@ import schema from './record.schema';
 
 /**
  * Produce output based on a schema for a set of numbers using rules defined on input
- * @param {import('../types').input} input
- * @returns {import('../types').record}
+ * @param {types.input} input
+ * @returns {[types.record]}
  */
 export function generateRecords(input) {
     checkInput(input);
