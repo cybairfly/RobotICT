@@ -14,5 +14,6 @@ Meteor.startup(() => {
         const records = generateRecords(input);
         records.forEach(record => Records.insert({...record, batchId}));
         Batches.insert({id: batchId, input});
+        // test
     }
 });
